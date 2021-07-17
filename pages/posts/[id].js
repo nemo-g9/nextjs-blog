@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import Link from 'next/link'
 import Layout from '../../components/layout'
 import Date from '../../components/date'
 import { getAllPostIds, getPostData } from '../../lib/posts'
@@ -15,6 +16,13 @@ export default function Post({ postData }) {
         <div className={utilStyles.lightText}>
           <Date dateString={postData.date} />
         </div>
+        <p className={utilStyles.lightText}>tags:
+          {postData.tags.map((tag) => (
+            <Link href={`/tags/${tag}`}>
+              <a className={utilStyles.tag}>{tag}</a>
+            </Link>
+          ))}
+        </p>
           <div dangerouslySetInnerHTML={{__html: postData.contentHtml}} />
       </article>
     </Layout>
