@@ -17,7 +17,9 @@ print(hello)
 **bold text**
 
 ## YouTubeの埋め込み
-<iframe width="560" height="315" src="https://www.youtube.com/embed/8fUR44emYmo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div class="youtube">
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/8fUR44emYmo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 ## Gifの埋め込み
 <iframe src="https://gifmagazine.net/embed/glp/4767826" width="300" height="240" frameBorder="0" class="gifmagazine-embed" allowFullScreen></iframe>
@@ -34,5 +36,4 @@ print(hello)
 初回は上手くいかないみたい。リロードすると出ます。
 
 プリレンダリングになってるのが問題かもしれん。キャッシュできなさそうだし。
-
-<a class="twitter-timeline" href="https://twitter.com/nemog_?ref_src=twsrc%5Etfw">Tweets by nemog_</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<a class="twitter-timeline" href="https://twitter.com/nemog_?ref_src=twsrc%5Etfw" width="300" height="300">Tweets by nemog_</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
