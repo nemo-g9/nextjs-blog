@@ -12,10 +12,12 @@ export default function Home({ allPostsData, allTags }) {
         <title>{siteTitle}</title>
       </Head>
       <section className={utilStyles.headingMd}>
-        <p>nemog（ねもぐ）です。開発をしたり、絵を描いたりして生きています。</p>
+        <p>nemog（ねもぐ）です。コードを書いて生きています</p>
+        <Link href={'/profile'}>
+          <a>プロフィール</a>
+        </Link>
         <h2>記事</h2>
         <ul className={utilStyles.list}>
-          {console.log(allPostsData)}
           {allPostsData.map(({ id, date, title}) =>(
             <li className={utilStyles.listItem} key={id}>
               <Link href={`/posts/${id}`}>
@@ -29,16 +31,6 @@ export default function Home({ allPostsData, allTags }) {
           ))}
         </ul>
         <h3>タグ</h3>
-        {/* <ul className={utilStyles.list}>
-          {console.log(allTags)}
-          {allTags.map(tag => (
-            <li className={utilStyles.listItem}>
-              <Link href={`/tags/${tag}`}>
-                <a>{tag}</a>
-              </Link>
-            </li>
-          ))}
-        </ul> */}
         {allTags.map(tag => (
           <Link href={`/tags/${tag}`}>
             <a className={utilStyles.tag}>{tag}</a>
