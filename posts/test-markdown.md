@@ -7,7 +7,8 @@ tags:
 
 # これはテストページです
 
-```
+```python
+# hello_world.py
 hello = 'This is codeblock'
 print(hello)
 ```
