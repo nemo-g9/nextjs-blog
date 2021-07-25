@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: blog.nemog.net
+
+# Sitemaps
+Sitemap: blog.nemog.net/sitemap.xml
