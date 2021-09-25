@@ -6,15 +6,11 @@ body {
   Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   line-height: 1.6;
   font-size: 18px;
+  background-color: aliceblue;
 }
 
 * {
   box-sizing: border-box;
-}
-
-a {
-  color: #0070f3;
-  text-decoration: none;
 }
 
 a:hover {
@@ -41,4 +37,9 @@ img {
   position: absolute;
   top: 0;
   left: 0;
+}
+
+a {
+  text-decoration: none;
+  color: midnightblue
 }

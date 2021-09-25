@@ -6,7 +6,7 @@ export const Profile = () => {
   <section className={utilStyles.heading2X1}>
     <p>nemog（ねもぐ）です。コードを書いて生きています</p>
     <Link href={'/profile'}>
-      <a>プロフィール</a>
+      <a> → プロフィール</a>
     </Link>
   </section>
 )};
