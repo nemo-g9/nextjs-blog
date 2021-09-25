@@ -4,7 +4,7 @@ import utilStyles from '../styles/utils.module.css'
 export function TagList ({allTagsData}) {
   return (
     <section>
-      <h3>タグ</h3>
+      <h2>タグ</h2>
       {allTagsData.map((tag) => (
         <Link href={`/tags/${tag}`}>
           <a className={utilStyles.tag}>{tag}</a>
