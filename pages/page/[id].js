@@ -1,4 +1,3 @@
-import { max } from "date-fns"
 import Link from "next/link"
 import Layout from "../../components/layout"
 import { PostList } from "../../components/post_list"
