@@ -1,5 +1,5 @@
 ---
-title: 'next-js-pagination'
+title: 'Next.jsのチュートリアルで作ったブログにページネーションをつけました'
 date: '2021-09-29'
 tags: 
 - Next.js
