@@ -1,9 +1,10 @@
+import { max } from "date-fns"
 import Link from "next/link"
 import Layout from "../../components/layout"
 import { PostList } from "../../components/post_list"
 import { getPostsDataPerPage, getPostsQuantity } from "../../lib/posts"
 
-export default function Page({ postsPerData, page_num }) {
+export default function Page({ postsPerData, page_num, maxPage }) {
   return (
     <Layout>
       <PostList PostsData={postsPerData} />
@@ -16,9 +17,12 @@ export default function Page({ postsPerData, page_num }) {
 
       <br />
 
-      <Link href={`/page/${ page_num + 1}`}>
-        <a>Next →</a>
-      </Link>
+      {page_num !== maxPage &&
+        <Link href={`/page/${ page_num + 1}`}>
+          <a>Next →</a>
+        </Link>
+      }
+
     </Layout>
   )
 }
@@ -26,7 +30,8 @@ export default function Page({ postsPerData, page_num }) {
 export async function getStaticPaths() {
   const PER_PAGE = 5
   const postsQuantity = getPostsQuantity()
-  const pages = [...Array(Math.ceil(postsQuantity / PER_PAGE)).keys()].map(i => (i + 1).toString())
+  const maxPage = Math.ceil(postsQuantity / PER_PAGE)
+  const pages = [...Array(maxPage).keys()].map(i => (i + 1).toString())
   const paths = pages.map(pageNumber => {
     return {
       params: {
@@ -44,10 +49,13 @@ export async function getStaticProps({ params }) {
   const PER_PAGE = 5
   const page_num = Number(params.id)
   const postsPerData = await getPostsDataPerPage(page_num, PER_PAGE)
+  const postsQuantity = getPostsQuantity()
+  const maxPage = Math.ceil(postsQuantity / PER_PAGE)
   return {
     props: {
       postsPerData,
-      page_num
+      page_num,
+      maxPage
     }
   }
 }
