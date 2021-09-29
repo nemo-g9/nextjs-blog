@@ -15,7 +15,7 @@ export default function Home({ PostsData, allTags }) {
       </Head>
       <Profile />
       <PostList PostsData={PostsData} />
-      <Link href='/posts'>
+      <Link href='/page/1'>
         <a> → 記事一覧へ</a>
       </Link>
       <TagList allTagsData={allTags} />
