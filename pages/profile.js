@@ -3,10 +3,16 @@ import Layout from "../components/layout";
 export default function Profile() {
   return (
     <Layout>
-      <h1>プロフィール</h1>
-      <h2>工事中</h2>
-      <p>何もないのは悲しいのでしまりんのGIFを貼っておきます</p>
-      <iframe src="https://gifmagazine.net/embed/glp/1310669" width="300" height="168" frameBorder="0" class="gifmagazine-embed" allowFullScreen></iframe>
+      <h1>nemog のプロフィール</h1>
+      <p>東京でWebのエンジニアをしています。</p>
+      <p>趣味は、ゲーム、アニメ、ガジェット、自転車、カメラなどです。</p>
+      <h2>リンク集</h2>
+      <ul>
+        <li><a href="https://twitter.com/nemog9_">Twitter</a></li>
+        <li><a href="https://github.com/nemog9">GitHub</a></li>
+        <li><a href="https://www.youtube.com/channel/UCw_spPQfZEes2cC-0Q-bkgg">YouTube</a></li>
+        <li><a href="https://scrapbox.io/nemog9-blog/">Scrapbox</a></li>
+      </ul>
     </Layout>
   )
 }
