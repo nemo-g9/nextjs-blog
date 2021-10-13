@@ -21,35 +21,13 @@ export default function Layout({ children, home }) {
         />
         <meta name="og:title" content={siteTitle} />
         <meta name="twitter:card" content="summary_large_image" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=DotGothic16&display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=DotGothic16&display=swap" rel="stylesheet"></link>
       </Head>
       <header className={styles.header}>
-        {home ? (
-          <>
-            <img
-              src="/images/profile.jpg"
-              className={`${styles.headerHomeImage} ${utilStyles.borderCircle}`}
-              alt={name}
-            />
-            <h1 className={utilStyles.heading2Xl}>nemog blog</h1>
-          </>
-        ) : (
-          <>
-            <Link href="/">
-              <a>
-                <img
-                  src="/images/profile.jpg"
-                  className={`${styles.headerImage} ${utilStyles.borderCircle}`}
-                  alt={name}
-                />
-              </a>
-            </Link>
-            <h2 className={utilStyles.headingLg}>
-              <Link href="/">
-                <a className={utilStyles.colorInherit}>nemog blog</a>
-              </Link>
-            </h2>
-          </>
-        )}
+        <h1 className={utilStyles.heading2Xl}>nemog blog</h1>
       </header>
       <main>{children}</main>
       {!home && (
@@ -60,5 +38,6 @@ export default function Layout({ children, home }) {
         </div>
       )}
     </div>
+    
   )
 }

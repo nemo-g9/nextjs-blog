@@ -5,6 +5,7 @@ import { getSortedPostsData, getAllTagsData } from '../lib/posts'
 import { Profile } from '../components/profile'
 import { PostList } from '../components/post_list'
 import { TagList } from '../components/tag_list'
+import utilStyles from '../styles/utils.module.css'
 
 export default function Home({ PostsData, allTags }) {
   return (
@@ -14,9 +15,11 @@ export default function Home({ PostsData, allTags }) {
       </Head>
       <Profile />
       <PostList PostsData={PostsData} />
-      <Link href='/page/1'>
-        <a> → 記事一覧へ</a>
-      </Link>
+      <section className={`${utilStyles.textCenter}`}>
+        <Link href='/page/1'>
+          <a> → 記事一覧へ</a>
+        </Link>
+      </section>
       <TagList allTagsData={allTags} />
     </Layout>
   )

@@ -5,7 +5,7 @@ import utilStyles from '../styles/utils.module.css'
 export const PostList = ({PostsData}) => {
   return (
     <section>
-      <h2>記事</h2>
+      <h2 className={`${utilStyles.headingXl}`}>記事</h2>
       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
         <ul className={utilStyles.list}>
           {PostsData.map(({ id, date, title}) => (
